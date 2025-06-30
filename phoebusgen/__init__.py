@@ -19,6 +19,7 @@ to reflect your site's custom definitions.
 
 import phoebusgen.widget
 import phoebusgen.screen
+from phoebusgen.parse import parse # ?????
 
 from os import path as _path
 from sys import platform as _platform
