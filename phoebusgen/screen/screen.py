@@ -12,7 +12,6 @@ def prettify(elem):
     reparse_xml = minidom.parseString(rough_string)
     return reparse_xml.toprettyxml(indent='  ', newl='\n')
 
-
 class Screen(object):
     """ Phoebus Screen object that holds widgets and can be written to .bob file """
     def __init__(self, name: str, f_name: str = None) -> None:

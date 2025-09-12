@@ -1,15 +1,12 @@
+import os
 import xml.etree.ElementTree as ET
 import phoebusgen
 
 def parse(fp):
-    try:
+    correct = phoebusgen.lint.lint(fp)
+    if correct:
         tree = ET.parse(fp)
-    except:
-        print(f'File "{fp}" does not exist.')
-        return
-    else:
         root = tree.getroot()
-        screen = phoebusgen.screen.Screen('', '')
-        screen.bob_file = fp
+        screen = phoebusgen.screen.Screen('', fp)
         screen.root = root
         return screen

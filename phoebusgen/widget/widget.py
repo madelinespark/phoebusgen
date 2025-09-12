@@ -24,7 +24,7 @@ class _Generic(object):
         :return: Return XML element or None if not found
         """
         elements = self.root.findall(tag)
-        # check to make sure there are not more than 1 elements
+        # check to make sure there is not more than 1 element
         # we don't want duplicate tags
         if len(elements) > 1:
             print('Warning, more than one element of the same tag! Returning a list')
